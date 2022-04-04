@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import './partials/variables';
+
+body{
+    background-color: #e9ecf4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    color: $turqueza;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2{
+    color: $gris2;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+p{
+    color: $gris2;
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: $turqueza;
+    &:hover{
+        color: $turquezadark;
+    }
+}
+
+img{
+    width: 100%;
+}
+
+@import './partials/header';
+@import './partials/grid';
+@import './partials/tarjetas';
+@import './partials/responsive';
+

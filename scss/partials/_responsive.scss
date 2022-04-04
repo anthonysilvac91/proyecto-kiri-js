@@ -1,0 +1,38 @@
+/* RESPONSIVE INDEX*/
+@media (max-width: 896px){
+    .grid-index{ grid-template-areas:
+        "header header header header"
+        "banner banner banner banner"
+        "carrusel carrusel carrusel carrusel"
+        "titulo-1 titulo-1 titulo-1 titulo-1"
+        "box-1 box-1 box-2 box-2"
+        "box-3 box-3 box-4 box-4"
+        "titulo-2 titulo-2 titulo-2 titulo-2"
+        "box-5 box-5 box-6 box-6"
+        "titulo-3 titulo-3 titulo-3 titulo-3"
+        "box-7 box-7 box-8 box-8";
+    }
+}
+
+@media (max-width: 480px){
+    .grid-index{       
+        grid-template-areas:
+        "header header header header"
+        "banner banner banner banner"
+        "carrusel carrusel carrusel carrusel"
+        "titulo-1 titulo-1 titulo-1 titulo-1"
+        "box-1 box-1 box-1 box-1"
+        "box-2 box-2 box-2 box-2"
+        "box-3 box-3 box-3 box-3"
+        "box-4 box-4 box-4 box-4"
+        "titulo-2 titulo-2 titulo-2 titulo-2"
+        "box-5 box-5 box-5 box-5"
+        "box-6 box-6 box-6 box-6"
+        "titulo-3 titulo-3 titulo-3 titulo-3"
+        "box-7 box-7 box-7 box-7"
+        "box-8 box-8 box-8 box-8";
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+}
