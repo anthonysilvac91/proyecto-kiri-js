@@ -59,6 +59,26 @@ img {
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
   grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-2 box-3 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-6 box-7 box-8" "titulo-3 titulo-3 titulo-3 titulo-3" "box-9 box-10 box-11 box-12" "titulo-4 titulo-4 titulo-4 titulo-4" "box-13 box-14 box-15 box-16" "titulo-5 titulo-5 titulo-5 titulo-5" "box-17 box-18 box-19 box-20" "titulo-6 titulo-6 titulo-6 titulo-6" "box-21 box-22 box-23 box-24" "carrusel carrusel carrusel carrusel"; }
 
+.grid-descargas {
+  width: 90%;
+  max-width: 1000px;
+  margin: 10px auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "box-5 box-5 box-6 box-6" "carrusel carrusel carrusel carrusel"; }
+
+.grid-blog {
+  width: 90%;
+  max-width: 1000px;
+  margin: 10px auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "carrusel carrusel carrusel carrusel"; }
+
 .header {
   grid-area: header; }
 
@@ -366,7 +386,7 @@ img {
   h1 {
     font-size: 1.5rem; } }
 
-/* RESPONSIVE TIENDA*/
+/* RESPONSIVE PAGINA TIENDA*/
 @media (max-width: 896px) {
   .grid-tienda {
     grid-template-areas: "header header header header" "banner banner banner banner"  "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-6 box-6" "box-7 box-7 box-8 box-8" "titulo-3 titulo-3 titulo-3 titulo-3" "box-9 box-9 box-10 box-10" "box-11 box-11 box-12 box-12" "titulo-4 titulo-4 titulo-4 titulo-4" "box-13 box-13 box-14 box-14" "box-15 box-15 box-16 box-16" "titulo-5 titulo-5 titulo-5 titulo-5" "box-17 box-17 box-18 box-18" "box-19 box-19 box-20 box-20" "titulo-6 titulo-6 titulo-6 titulo-6" "box-21 box-21 box-22 box-22" "box-23 box-23 box-24 box-24" "carrusel carrusel carrusel carrusel"; } }
@@ -374,5 +394,19 @@ img {
 @media (max-width: 480px) {
   .grid-tienda {
     grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-5 box-5" "box-6 box-6 box-6 box-6" "box-7 box-7 box-7 box-7" "box-8 box-8 box-8 box-8" "titulo-3 titulo-3 titulo-3 titulo-3" "box-9 box-9 box-9 box-9" "box-10 box-10 box-10 box-10" "box-11 box-11 box-11 box-11" "box-12 box-12 box-12 box-12" "titulo-4 titulo-4 titulo-4 titulo-4" "box-13 box-13 box-13 box-13" "box-14 box-14 box-14 box-14" "box-15 box-15 box-15 box-15" "box-16 box-16 box-16 box-16" "titulo-5 titulo-5 titulo-5 titulo-5" "box-17 box-17 box-17 box-17" "box-18 box-18 box-18 box-18" "box-19 box-19 box-19 box-19" "box-20 box-20 box-20 box-20" "titulo-6 titulo-6 titulo-6 titulo-6" "box-21 box-21 box-21 box-21" "box-22 box-22 box-22 box-22" "box-23 box-23 box-23 box-23" "box-24 box-24 box-24 box-24" "carrusel carrusel carrusel carrusel"; }
+  h1 {
+    font-size: 1.5rem; } }
+
+/* RESPONSIVE PAGINA DESCARGAS*/
+@media (max-width: 480px) {
+  .grid-descargas {
+    grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "box-5 box-5 box-5 box-5" "box-6 box-6 box-6 box-6" "carrusel carrusel carrusel carrusel"; }
+  h1 {
+    font-size: 1.5rem; } }
+
+/* RESPONSIVE PAGINA BLOG*/
+@media (max-width: 480px) {
+  .grid-blog {
+    grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "carrusel carrusel carrusel carrusel"; }
   h1 {
     font-size: 1.5rem; } }
