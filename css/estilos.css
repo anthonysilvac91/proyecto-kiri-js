@@ -393,6 +393,31 @@ img {
   .descargas .boton:hover {
     background-color: pink; }
 
+.grid-contacto .formulario form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 7px;
+  margin-bottom: 50px; }
+
+.grid-contacto .formulario textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 7px; }
+
+.grid-contacto .formulario input {
+  margin-bottom: 10px;
+  padding: 7px; }
+
+.grid-contacto .formulario #boton {
+  background-color: #f3969a;
+  color: #f8f9fa; }
+  .grid-contacto .formulario #boton:hover {
+    background-color: pink; }
+
 /* RESPONSIVE INDEX*/
 @media (max-width: 896px) {
   .grid-index {
@@ -428,28 +453,3 @@ img {
     grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "carrusel carrusel carrusel carrusel"; }
   h1 {
     font-size: 1.5rem; } }
-
-.grid-contacto .formulario form {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 20px;
-  margin-top: 50px;
-  border-radius: 7px;
-  margin-bottom: 50px; }
-
-.grid-contacto .formulario textarea {
-  min-height: 100px;
-  max-height: 200px;
-  max-width: 100%;
-  margin-bottom: 10px;
-  padding: 7px; }
-
-.grid-contacto .formulario input {
-  margin-bottom: 10px;
-  padding: 7px; }
-
-.grid-contacto .formulario #boton {
-  background-color: #f3969a;
-  color: #f8f9fa; }
-  .grid-contacto .formulario #boton:hover {
-    background-color: pink; }
