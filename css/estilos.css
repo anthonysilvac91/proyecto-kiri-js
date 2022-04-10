@@ -79,6 +79,16 @@ img {
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
   grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "carrusel carrusel carrusel carrusel"; }
 
+.grid-contacto {
+  width: 90%;
+  max-width: 1000px;
+  margin: 10px auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "formulario formulario formulario formulario" "box-1 box-1 box-1 box-1"; }
+
 .header {
   grid-area: header; }
 
@@ -87,6 +97,14 @@ img {
 
 .carousel {
   grid-area: carrusel; }
+
+.formulario {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-align: center;
+  grid-area: formulario; }
 
 .titulo-1 {
   grid-area: titulo-1;
@@ -410,3 +428,28 @@ img {
     grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "carrusel carrusel carrusel carrusel"; }
   h1 {
     font-size: 1.5rem; } }
+
+.grid-contacto .formulario form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 7px;
+  margin-bottom: 50px; }
+
+.grid-contacto .formulario textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 7px; }
+
+.grid-contacto .formulario input {
+  margin-bottom: 10px;
+  padding: 7px; }
+
+.grid-contacto .formulario #boton {
+  background-color: #f3969a;
+  color: #f8f9fa; }
+  .grid-contacto .formulario #boton:hover {
+    background-color: pink; }

@@ -72,6 +72,18 @@
     "carrusel carrusel carrusel carrusel"
     ;
 }
+.grid-contacto{
+    @include grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto, 1fr, minmax(min-content));
+    grid-template-areas:
+    "header header header header"
+    "banner banner banner banner"
+    "titulo-1 titulo-1 titulo-1 titulo-1"
+    "formulario formulario formulario formulario"
+    "box-1 box-1 box-1 box-1"
+    ;
+}
 
 @mixin secciones {
     background: $blanco;
@@ -89,6 +101,10 @@
 }
 .carousel{
     grid-area: carrusel;  
+}
+.formulario{
+    @include secciones;
+    grid-area: formulario;
 }
 .titulo-1{
     grid-area: titulo-1;
