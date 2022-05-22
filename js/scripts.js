@@ -56,6 +56,21 @@ let accesorios = [producto13, producto14, producto15, producto16]
 let memopads = [producto17, producto18, producto19, producto20]
 let planificadores = [producto21, producto22, producto23, producto24]
 
+    /* INVENTARIO COMPLETO */
+let productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10, producto11, producto12, producto13, producto14, producto15, producto16, producto17, producto18, producto19, producto20, producto21, producto22, producto23, producto24 ]
+
+    /* CONSULTA CARRITO */
+
+/*let carrito = []
+
+if(localStorage.getItem('carrito')) {
+    carrito = JSON.parse(localStorage.getItem('carrito')) 
+} else {
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+}*/
+
+
+/* AGREGANDO PRODUCTOS A LA TIENDA*/
 
 const gridProductos1 = document.getElementById("grid-productos-1")
 const gridProductos2 = document.getElementById("grid-productos-2")
@@ -64,14 +79,12 @@ const gridProductos4 = document.getElementById("grid-productos-4")
 const gridProductos5 = document.getElementById("grid-productos-5")
 const gridProductos6 = document.getElementById("grid-productos-6")
 
-
-/* AGREGANDO PRODUCTOS SEGUN CATEGORIA */
 tarjetas1 = () => {
     gridProductos1.innerHTML = ""
     washitapes.forEach((producto) =>{
         gridProductos1.innerHTML += `
-        <section class="box-${producto.id} producto">
-            <div>
+        <section class="box-${producto.id} producto" >
+            <div id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
                         <img src="${producto.img}" alt="washitape">
@@ -80,7 +93,7 @@ tarjetas1 = () => {
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -93,7 +106,7 @@ tarjetas2 = () => {
     stickers.forEach((producto) =>{
         gridProductos2.innerHTML += `
         <section class="box-${producto.id} producto">
-            <div>
+            <div id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
                         <img src="${producto.img}" alt="washitape">
@@ -102,7 +115,7 @@ tarjetas2 = () => {
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -115,7 +128,7 @@ tarjetas3 = () => {
     agendas.forEach((producto) =>{
         gridProductos3.innerHTML += `
         <section class="box-${producto.id} producto">
-            <div>
+            <div id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
                         <img src="${producto.img}" alt="washitape">
@@ -124,7 +137,7 @@ tarjetas3 = () => {
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -137,7 +150,7 @@ tarjetas4 = () => {
     accesorios.forEach((producto) =>{
         gridProductos4.innerHTML += `
         <section class="box-${producto.id} producto">
-            <div>
+            <div id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
                         <img src="${producto.img}" alt="washitape">
@@ -146,7 +159,7 @@ tarjetas4 = () => {
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -159,7 +172,7 @@ tarjetas5 = () => {
     memopads.forEach((producto) =>{
         gridProductos5.innerHTML += `
         <section class="box-${producto.id} producto">
-            <div>
+            <div id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
                         <img src="${producto.img}" alt="washitape">
@@ -168,7 +181,7 @@ tarjetas5 = () => {
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -181,7 +194,7 @@ tarjetas6 = () => {
     planificadores.forEach((producto) =>{
         gridProductos6.innerHTML += `
         <section class="box-${producto.id} producto">
-            <div>
+            <div id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
                         <img class="item-img" src="${producto.img}" alt="washitape">
@@ -190,7 +203,7 @@ tarjetas6 = () => {
                 <strong class="item-precio">$${producto.precio}</strong>
                 <h2 class="item-nombre">${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -205,11 +218,83 @@ tarjetas4(accesorios)
 tarjetas5(memopads)
 tarjetas6(planificadores)
 
-//let carrito = []
 
 
 
-const agregarCarrito = document.querySelectorAll('.carrito')
+
+
+/*productos.forEach((producto) =>{
+    (document.querySelector(`#boton${producto.id}`)).addEventListener('click', () =>{
+        console.log(document.querySelector(`#producto${producto.id}`))
+        console.log()
+    })
+})*/
+
+ 
+
+
+
+function capturarStorage(){
+    return JSON.parse(localStorage.getItem("carrito")) || []
+}
+
+function guardarStorage (productos){
+    localStorage.setItem("carrito", JSON.stringify(productos))
+}
+
+function agregar(id){
+    let carrito = capturarStorage()
+    if (productoEnCarrito(id)){
+        cantidad(id)
+    } else {
+        let productoEncontrado = productos.find(e=> e.id == id)
+        carrito.push({...productoEncontrado, cantidad:1})
+        guardarStorage(carrito)
+    }
+    
+    console.log(carrito)
+}
+
+
+function cantidad(id){
+    let carrito = capturarStorage() 
+    const indice = carrito.findIndex (e=> id==id)
+    carrito[indice].cantidad++
+    guardarStorage(carrito)
+}
+
+function productoEnCarrito (id){
+    let carrito = capturarStorage()
+    return carrito.some(e=> id==id)
+}
+
+
+/*
+let carrito = []
+
+const boton = document.getElementById(`boton${productos.id}`)
+
+boton.addEventListener('click', () =>{
+    agregarAlCarrito(productos.id)
+    
+})
+
+
+const agregarAlCarrito = (prodId) => {
+    const item = productos.find((prod) => productos.id === prodId)
+    carrito.push (item)
+    console.log(carrito)
+}
+    */
+
+
+
+
+
+
+
+
+/*const agregarCarrito = document.querySelectorAll('.carrito')
 
 agregarCarrito.forEach(producto =>{
     producto.addEventListener('click', agregarAlCarrito)
@@ -219,7 +304,9 @@ function agregarAlCarrito(event) {
     const boton = event.target
     const item = boton.closest ('.item')
     console.log (agregarAlCarrito)
-}
+}*/
+
+
 
 
 

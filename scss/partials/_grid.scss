@@ -70,6 +70,7 @@
     grid-template-areas:
     "header header header header"
     "banner banner banner banner"
+    "nav-carrito nav-carrito nav-carrito nav-carrito"
     "titulo-1 titulo-1 titulo-1 titulo-1"
     "grid-productos-1 grid-productos-1 grid-productos-1 grid-productos-1"
     "titulo-2 titulo-2 titulo-2 titulo-2"
@@ -177,6 +178,10 @@
     grid-area: grid-productos-6;
 }
 
+.nav-carrito{
+    @include secciones;
+    grid-area: nav-carrito;
+}
 .titulo-1{
     grid-area: titulo-1;
     @include secciones;
