@@ -94,7 +94,7 @@ tarjetas1 = () => {
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -110,13 +110,13 @@ tarjetas2 = () => {
             <div class="item" id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
-                        <img src="${producto.img}" alt="washitape">
+                        <img src="${producto.img}" alt="stickers">
                     </a>
                 </div>
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -132,13 +132,13 @@ tarjetas3 = () => {
             <div class="item" id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
-                        <img src="${producto.img}" alt="washitape">
+                        <img src="${producto.img}" alt="agendas">
                     </a>
                 </div>
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -154,13 +154,13 @@ tarjetas4 = () => {
             <div class="item" id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
-                        <img src="${producto.img}" alt="washitape">
+                        <img src="${producto.img}" alt="accesorios">
                     </a>
                 </div>
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -176,13 +176,13 @@ tarjetas5 = () => {
             <div class="item" id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
-                        <img src="${producto.img}" alt="washitape">
+                        <img src="${producto.img}" alt="memopads">
                     </a>
                 </div>
                 <strong>$${producto.precio}</strong>
                 <h2>${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -198,13 +198,13 @@ tarjetas6 = () => {
             <div class="item" id="producto${producto.id}">
                 <div class="contenedor-img">
                     <a href="#">
-                        <img class="item-img" src="${producto.img}" alt="washitape">
+                        <img class="item-img" src="${producto.img}" alt="planificadores">
                     </a>
                 </div>
                 <strong class="item-precio">$${producto.precio}</strong>
                 <h2 class="item-nombre">${producto.nombre}</h2>
                 <p> ${producto.descripcion} </p>
-                <button  id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
+                <button onclick="agregar(${producto.id})"  id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
                     
             </div>
         </section>`
@@ -214,15 +214,76 @@ tarjetas6 = () => {
 
 // onclick="agregar(${producto.id})"
 
+function mostrarCarrito (){
+    let carrito = capturarStorage()
+    contenedorCarrito.innerHTML = ""
+    carrito.forEach(element => {
+        contenedorCarrito.innerHTML += `
+        <tr>
+            <th scope="row">${element.cantidad}</th>
+            <td>${element.nombre}</td>
+            <td>${element.precio}</td>
+            <td>x</td>
+        </tr>
+        `
+    })
+}
+
+
+
+function capturarStorage(){
+    return JSON.parse(localStorage.getItem("carrito")) || []
+
+}
+
+function guardarStorage(car){
+    localStorage.setItem("carrito", JSON.stringify(car))
+}
+
+
+function agregar(idBoton){
+    let carrito = capturarStorage()
+    if(isInCart(idBoton)){
+        incrementarCarrito(idBoton)
+    } else {
+        let productoEncontrado = productos.find(e => e.id == idBoton)
+        carrito.push({ ...productoEncontrado, cantidad:1})
+        guardarStorage(carrito)
+        mostrarCarrito(carrito)
+    }
+    console.log(carrito)
+}
+
+function incrementarCarrito(id){
+    let carrito = capturarStorage()
+    const indice = carrito.findIndex(e=> e.id == id)
+    carrito [indice].cantidad++
+    guardarStorage(carrito)
+    mostrarCarrito(carrito)
+}
+
+function isInCart (id){
+    let carrito = capturarStorage()
+    return carrito.some(e=> e.id == id)
+}
+
+
+
 tarjetas1(washitapes)
 tarjetas2(stickers)
 tarjetas3(agendas)
 tarjetas4(accesorios)
 tarjetas5(memopads)
 tarjetas6(planificadores)
+mostrarCarrito()
 
 
 
+
+
+
+
+/*
 const agregarCarrito = document.querySelectorAll('.carrito')
 console.log(agregarCarrito)
 agregarCarrito.forEach((botonCarrito) =>{
@@ -234,7 +295,7 @@ function carritoAgregado(event) {
     const boton = event.target
     const item = boton.closest('.item')
     console.log(item)
-}
+}*/
 
 
 /*
