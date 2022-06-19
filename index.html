@@ -7,7 +7,10 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="../imagenes/favicon/favicon-32x32.png">
     <!-- Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- 5.2 -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  -->
+        <!-- 5.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +18,7 @@
     <script src="https://kit.fontawesome.com/9183d26b68.js" crossorigin="anonymous"></script>
     <!-- Estilo CSS -->
     <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Meta -->
     <title>Kiripaper - Articulos de papeleria y más</title>
     <meta name="description" content="Articulos de papeleria - Encuentra las mejores marcas para organizar, planificar y lograr tus metas">
 </head>
@@ -22,17 +26,13 @@
     <main class="grid-index grid">
         <!-- MENU -->
         <header class="header">
+            <!-- MENU BOOSTRAP 5.1 -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a href="./index.html">
 
                         <img src="./imagenes/marca/logo-kiripaper.png" alt="logo">
                     </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav me-auto">
                     <li class="nav-item">
@@ -60,7 +60,41 @@
                     </form>
                 </div>
                 </div>
-            </nav>
+            </nav> 
+            <!-- MENU PENDIENTE ARREGLAR BOOSTRAP 5.2 (REVISAR CSS) -->
+            <!-- <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a href="./index.html">
+
+                        <img src="./imagenes/marca/logo-kiripaper.png" alt="logo">
+                    </a>                
+                  
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/tienda.html">Tienda</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/blog.html">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/descargas.html">Descargas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/descargas.html">Contacto</a>
+                      </li>
+                      
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+              </nav> -->
         </header>
         <!-- BANNER PROMOCIONAL -->
         <section class="banner">
@@ -259,6 +293,10 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <!-- JS BOOSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+    <!-- JS PRODUCTOS DESTACADOS -->
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
