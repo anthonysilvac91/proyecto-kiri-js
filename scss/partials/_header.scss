@@ -2,6 +2,17 @@
     color: rgba(0,0,0,.3);
 }
 
+.navbar i{
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .3s;
+        &:hover{
+            color: $rosa;
+
+    }
+}
+
 
 
 

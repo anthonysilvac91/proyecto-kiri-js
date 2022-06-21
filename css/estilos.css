@@ -31,8 +31,19 @@ a {
 img {
   width: 100%; }
 
+i {
+  padding: 10px; }
+
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.3); }
+
+.navbar i {
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: .3s; }
+  .navbar i:hover {
+    color: #f3969a; }
 
 .header img {
   height: 100px;

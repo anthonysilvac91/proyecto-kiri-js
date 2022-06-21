@@ -1,3 +1,5 @@
+// EVENTO DE DESCARGAS (PENDIENTE CARGAR ARCHIVOS A LA NUBE)
+
 let descarga = document.querySelectorAll('.alertDescarga')
 
 
