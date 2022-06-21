@@ -90,6 +90,16 @@ img {
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
   grid-template-areas: "header header header header" "banner banner banner banner" "titulo-0 titulo-0 titulo-0 titulo-0" "nav-carrito nav-carrito nav-carrito nav-carrito" "titulo-1 titulo-1 titulo-1 titulo-1" "grid-productos-1 grid-productos-1 grid-productos-1 grid-productos-1" "titulo-2 titulo-2 titulo-2 titulo-2" "grid-productos-2 grid-productos-2 grid-productos-2 grid-productos-2" "titulo-3 titulo-3 titulo-3 titulo-3" "grid-productos-3 grid-productos-3 grid-productos-3 grid-productos-3" "titulo-4 titulo-4 titulo-4 titulo-4" "grid-productos-4 grid-productos-4 grid-productos-4 grid-productos-4" "titulo-5 titulo-5 titulo-5 titulo-5" "grid-productos-5 grid-productos-5 grid-productos-5 grid-productos-5" "titulo-6 titulo-6 titulo-6 titulo-6" "grid-productos-6 grid-productos-6 grid-productos-6 grid-productos-6" "carrusel carrusel carrusel carrusel"; }
 
+.grid-tienda2 {
+  width: 90%;
+  max-width: 1000px;
+  margin: 10px auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "divProductos divProductos divProductos divProductos" "divProductos divProductos divProductos divProductos" "carrusel carrusel carrusel carrusel"; }
+
 /* GRID SECCION PRODUCTOS */
 .grid-productos-1 {
   display: grid;
@@ -149,6 +159,9 @@ img {
   margin-top: 10px;
   text-align: center;
   grid-area: formulario; }
+
+.divProductos {
+  grid-area: divProductos; }
 
 .grid-productos-1 {
   grid-area: grid-productos-1; }

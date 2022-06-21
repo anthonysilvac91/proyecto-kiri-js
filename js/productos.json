@@ -1,0 +1,224 @@
+[
+
+    {
+        "id": 1,
+        "nombre": "Washi Azul",
+        "precio": 1000,
+        "descripcion": "Set de 10   washitape decorativas azules variadas",
+        "categoria": "washitapes",
+        "stock": 5,
+        "img": "../imagenes/tienda/washitapes/washitape 1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Washi Perritos",
+        "precio": 2000,
+        "descripcion": "Set de 10 washitape decorativas perritos",
+        "categoria": "washitapes",
+        "stock": 5,
+        "img": "../imagenes/tienda/washitapes/washitape 2.jpg" 
+    },
+    {
+        "id": 3,
+        "nombre": "Washi Abstracto",
+        "precio": 3000,
+        "descripcion": "Set de 10 washitape decorativas Abstractas",
+        "categoria": "washitapes",
+        "stock": 5,
+        "img": "../imagenes/tienda/washitapes/washitape 3.jpg"  
+    },
+    {
+        "id": 4,
+        "nombre": "Washi Van Gogh",
+        "precio": 3000,
+        "descripcion": "Set de 3 washitape decorativas Van Gogh",
+        "categoria": "washitapes",
+        "stock": 5,
+        "img": "../imagenes/tienda/washitapes/washitape 4.jpg" 
+    },
+
+    {
+        "id": 5,
+        "nombre": "Sticker ABC 123",
+        "precio": 3000,
+        "descripcion": "Set numeros y letras coloridos. 48 patrones diferentes",
+        "categoria": "sticker",
+        "stock": 5,
+        "img": "../imagenes/tienda/sticker/sticker 1.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Sticker Gatitos",
+        "precio": 3000,
+        "descripcion": "Set de lindos sticker gatitos kawai. 45 patrones diferentes..",
+        "categoria": "sticker",
+        "stock": 5,
+        "img": "../imagenes/tienda/sticker/sticker 2.jpg" 
+    }, {
+        "id": 7,
+        "nombre": "Sticker POP",
+        "precio": 3000,
+        "descripcion": "Set sticker vintage Pop colorido. 46 patrones diferentes",
+        "categoria": "sticker",
+        "stock": 5,
+        "img": "../imagenes/tienda/sticker/sticker 3.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Sticker Van Gogh",
+        "precio": 3000,
+        "descripcion": "Set decorativo pinturas Van Gogh. 100 patrones diferentes",
+        "categoria": "sticker",
+        "stock": 5,
+        "img": "../imagenes/tienda/sticker/sticker 4.jpg"
+    },
+
+    {
+        "id": 9,
+        "nombre": "Agenda Gatitos",
+        "precio": 3000,
+        "descripcion": "Linda Agenda diseño gatitos. Estilo: Puntitos",
+        "categoria": "agendas",
+        "stock": 5,
+        "img": "../imagenes/tienda/agendas/agenda 1.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Agenda Love",
+        "precio": 3000,
+        "descripcion": "Linda Agenda diseño letras. Estilo: Puntitos",
+        "categoria": "agendas",
+        "stock": 5,
+        "img": "../imagenes/tienda/agendas/agenda 2.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Agenda Cactus",
+        "precio": 3000,
+        "descripcion": "Linda agenda diseño cactus. Estilo: Puntitos",
+        "categoria": "agendas",
+        "stock": 5,
+        "img": "../imagenes/tienda/agendas/agenda 3.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Agenda Palta",
+        "precio": 3000,
+        "descripcion": "Linda agenda diseño palta. Estilo: Puntitos",
+        "categoria": "agendas",
+        "stock": 5,
+        "img": "../imagenes/tienda/agendas/agenda 4.jpg"
+    },
+
+    {
+        "id": 13,
+        "nombre": "Clips Cactus",
+        "precio": 3000,
+        "descripcion": "Lindos clips con estilo de cactus. 5 colores",
+        "categoria": "accesorios",
+        "stock": 5,
+        "img": "../imagenes/tienda/accesorios/accesorios 1.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Cutter",
+        "precio": 3000,
+        "descripcion": "Lindos cutter para paginas. 1 diseño 3 colores",
+        "categoria": "accesorios",
+        "stock": 5,
+        "img": "../imagenes/tienda/accesorios/accesorios 2.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "Cinta Decorativa",
+        "precio": 3000,
+        "descripcion": "Linda cinta adhesiva kawai decorativa. 2 diseños",
+        "categoria": "accesorios",
+        "stock": 5,
+        "img": "../imagenes/tienda/accesorios/accesorios 3.jpg"
+    },
+    {
+        "id": 16,
+        "nombre": "Sujeta Páginas",
+        "precio": 3000,
+        "descripcion": "Lindos sujeta páginas medianos. 4 colores",
+        "categoria": "accesorios",
+        "stock": 5,
+        "img": "../imagenes/tienda/accesorios/accesorios 4.jpg"
+    },
+
+    {
+        "id": 17,
+        "nombre": "Marca Páginas",
+        "precio": 3000,
+        "descripcion": "Lindos Marcadores de páginas. 5 diseños. 60 unidades",
+        "categoria": "memopads",
+        "stock": 5,
+        "img":"../imagenes/tienda/notas adhesivas/notas adhesivas 1.jpg" 
+    },
+    {
+        "id": 18,
+        "nombre": "Índice Adhesivo",
+        "precio": 3000,
+        "descripcion": "Marca páginas indice. 2 diseños. 10 patrones. 15 unidades",
+        "categoria": "memopads",
+        "stock": 5,
+        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 2.jpg"
+    },
+    {
+        "id": 19,
+        "nombre": "Índice Puntos",
+        "precio": 3000,
+        "descripcion": "Marca páginas indice. 2 diseños. 11 patrones. 15 unidades",
+        "categoria": "memopads",
+        "stock": 5,
+        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 3.jpg"
+    },
+    {
+        "id": 20,
+        "nombre": "Banderitas",
+        "precio": 3000,
+        "descripcion": "Marca páginas Diseños. 2 diseños. 5 patrones. 20 unidades",
+        "categoria": "memopads",
+        "stock": 5,
+        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 4.jpg"
+    },
+    {
+        "id": 21,
+        "nombre": "Planificador Semanal",
+        "precio": 3000,
+        "descripcion": "Sencillo y fácil de usar. Estilo: Neon",
+        "categoria": "planificadores",
+        "stock": 5,
+        "img":"../imagenes/tienda/planificadores/planner 1.jpg"
+    },
+    {
+        "id": 22,
+        "nombre": "Planificador Semanal",
+        "precio": 3000,
+        "descripcion": "Sencillo y fácil de usar. Estilo: Donas",
+        "categoria": "planificadores",
+        "stock": 5,
+        "img": "../imagenes/tienda/planificadores/planner 2.jpg"
+    },
+    {
+        "id": 24,
+        "nombre": "Registro de Hábitos",
+        "precio": 3000,
+        "descripcion": "Planifica tu mes y lleva el control de tus tareas",
+        "categoria": "planificadores",
+        "stock": 5,
+        "img":"../imagenes/tienda/planificadores/planner 3.jpg" 
+    },
+    {
+        "id": 23,
+        "nombre": "Registro de Hábitos",
+        "precio": 3000,
+        "descripcion": "Planifica tu mes y lleva el control de tus tareas",
+        "categoria": "planificadores",
+        "stock": 5,
+        "img": "../imagenes/tienda/planificadores/planner 4.jpg"
+    }
+ 
+
+]

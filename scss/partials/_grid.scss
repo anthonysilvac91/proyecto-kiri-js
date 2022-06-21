@@ -87,6 +87,19 @@
     "carrusel carrusel carrusel carrusel"
     ;
 }
+.grid-tienda2{
+    @include grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto, 1fr, minmax(min-content));
+    grid-template-areas:
+    "header header header header"
+    "banner banner banner banner"
+    "titulo-1 titulo-1 titulo-1 titulo-1"
+    "divProductos divProductos divProductos divProductos"
+    "divProductos divProductos divProductos divProductos"
+    "carrusel carrusel carrusel carrusel"
+    ;
+}
 /* GRID SECCION PRODUCTOS */
 .grid-productos-1{
     display: grid;
@@ -158,6 +171,9 @@
 .formulario{
     @include secciones;
     grid-area: formulario;
+}
+.divProductos{
+    grid-area: divProductos;
 }
 
 .grid-productos-1{
