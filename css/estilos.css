@@ -50,7 +50,52 @@ i {
   width: auto;
   margin-right: 10px; }
 
- 
+.navbar button {
+  background-color: #f8f9fa;
+  border: 0ch; }
+
+#cart-count-info {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  background: #f3969a;
+  color: #f8f9fa;
+  font-size: .8rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600; }
+
+.item-carrito {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  padding: 1.2rem 0.6rem; }
+  .item-carrito h2 {
+    font-size: 1.5rem; }
+  .item-carrito img {
+    width: 100px; }
+
+.item-carrito:last-child {
+  border-bottom: none; }
+
+.eliminar {
+  position: absolute;
+  right: 15px;
+  top: -10px;
+  font-size: .9rem;
+  background-color: #f3969a;
+  border: none;
+  border-radius: 5px;
+  color: #f8f9fa; }
+
+.cart-item-info {
+  text-align: left; }
 
 /* GRID DE PAGINAS */
 .grid-index {
@@ -61,15 +106,7 @@ i {
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "header header header header"
- "banner banner banner banner"
- "carrusel carrusel carrusel carrusel"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-2 box-3 box-4"
- "titulo-2 titulo-2 titulo-2 titulo-2"
- "box-5 box-5 box-6 box-6"
- "titulo-3 titulo-3 titulo-3 titulo-3"
- "box-7 box-7 box-8 box-8"; }
+  grid-template-areas: "header header header header" "banner banner banner banner" "carrusel carrusel carrusel carrusel" "titulo-1 titulo-1 titulo-1 titulo-1" "divDestacados divDestacados divDestacados divDestacados" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-6 box-6" "titulo-3 titulo-3 titulo-3 titulo-3" "box-7 box-7 box-8 box-8"; }
 
 .grid-descargas {
   width: 90%;
@@ -79,13 +116,7 @@ i {
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "header header header header"
- "banner banner banner banner"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-1 box-2 box-2"
- "box-3 box-3 box-4 box-4"
- "box-5 box-5 box-6 box-6"
- "carrusel carrusel carrusel carrusel"; }
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "box-5 box-5 box-6 box-6" "carrusel carrusel carrusel carrusel"; }
 
 .grid-blog {
   width: 90%;
@@ -95,12 +126,7 @@ i {
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "header header header header"
- "banner banner banner banner"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-1 box-2 box-2"
- "box-3 box-3 box-4 box-4"
- "carrusel carrusel carrusel carrusel"; }
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "carrusel carrusel carrusel carrusel"; }
 
 .grid-contacto {
   width: 90%;
@@ -110,11 +136,7 @@ i {
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "header header header header"
- "banner banner banner banner"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "formulario formulario formulario formulario"
- "box-1 box-1 box-1 box-1"; }
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "formulario formulario formulario formulario" "box-1 box-1 box-1 box-1"; }
 
 .grid-tienda {
   width: 90%;
@@ -124,23 +146,7 @@ i {
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "header header header header"
- "banner banner banner banner"
- "titulo-0 titulo-0 titulo-0 titulo-0"
- "nav-carrito nav-carrito nav-carrito nav-carrito"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "grid-productos-1 grid-productos-1 grid-productos-1 grid-productos-1"
- "titulo-2 titulo-2 titulo-2 titulo-2"
- "grid-productos-2 grid-productos-2 grid-productos-2 grid-productos-2"
- "titulo-3 titulo-3 titulo-3 titulo-3"
- "grid-productos-3 grid-productos-3 grid-productos-3 grid-productos-3"
- "titulo-4 titulo-4 titulo-4 titulo-4"
- "grid-productos-4 grid-productos-4 grid-productos-4 grid-productos-4"
- "titulo-5 titulo-5 titulo-5 titulo-5"
- "grid-productos-5 grid-productos-5 grid-productos-5 grid-productos-5"
- "titulo-6 titulo-6 titulo-6 titulo-6"
- "grid-productos-6 grid-productos-6 grid-productos-6 grid-productos-6"
- "carrusel carrusel carrusel carrusel"; }
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-0 titulo-0 titulo-0 titulo-0" "nav-carrito nav-carrito nav-carrito nav-carrito" "titulo-1 titulo-1 titulo-1 titulo-1" "grid-productos-1 grid-productos-1 grid-productos-1 grid-productos-1" "titulo-2 titulo-2 titulo-2 titulo-2" "grid-productos-2 grid-productos-2 grid-productos-2 grid-productos-2" "titulo-3 titulo-3 titulo-3 titulo-3" "grid-productos-3 grid-productos-3 grid-productos-3 grid-productos-3" "titulo-4 titulo-4 titulo-4 titulo-4" "grid-productos-4 grid-productos-4 grid-productos-4 grid-productos-4" "titulo-5 titulo-5 titulo-5 titulo-5" "grid-productos-5 grid-productos-5 grid-productos-5 grid-productos-5" "titulo-6 titulo-6 titulo-6 titulo-6" "grid-productos-6 grid-productos-6 grid-productos-6 grid-productos-6" "carrusel carrusel carrusel carrusel"; }
 
 .grid-tienda2 {
   width: 90%;
@@ -150,12 +156,7 @@ i {
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "header header header header"
- "banner banner banner banner"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "divProductos divProductos divProductos divProductos"
- "divProductos divProductos divProductos divProductos"
- "carrusel carrusel carrusel carrusel"; }
+  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "divProductos divProductos divProductos divProductos" "divProductos divProductos divProductos divProductos" "carrusel carrusel carrusel carrusel"; }
 
 /* GRID SECCION PRODUCTOS */
 .grid-productos-1 {
@@ -219,6 +220,9 @@ i {
 
 .divProductos {
   grid-area: divProductos; }
+
+.divDestacados {
+  grid-area: divDestacados; }
 
 .grid-productos-1 {
   grid-area: grid-productos-1; }
@@ -572,125 +576,35 @@ i {
 /* RESPONSIVE INDEX*/
 @media (max-width: 896px) {
   .grid-index {
-    grid-template-areas: "header header header header"
- "banner banner banner banner"
- "carrusel carrusel carrusel carrusel"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-1 box-2 box-2"
- "box-3 box-3 box-4 box-4"
- "titulo-2 titulo-2 titulo-2 titulo-2"
- "box-5 box-5 box-6 box-6"
- "titulo-3 titulo-3 titulo-3 titulo-3"
- "box-7 box-7 box-8 box-8"; } }
+    grid-template-areas: "header header header header" "banner banner banner banner" "carrusel carrusel carrusel carrusel" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-6 box-6" "titulo-3 titulo-3 titulo-3 titulo-3" "box-7 box-7 box-8 box-8"; } }
 
 @media (max-width: 480px) {
   .grid-index {
-    grid-template-areas: "header header header header"
- "banner banner banner banner"
- "carrusel carrusel carrusel carrusel"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-1 box-1 box-1"
- "box-2 box-2 box-2 box-2"
- "box-3 box-3 box-3 box-3"
- "box-4 box-4 box-4 box-4"
- "titulo-2 titulo-2 titulo-2 titulo-2"
- "box-5 box-5 box-5 box-5"
- "box-6 box-6 box-6 box-6"
- "titulo-3 titulo-3 titulo-3 titulo-3"
- "box-7 box-7 box-7 box-7"
- "box-8 box-8 box-8 box-8"; }
+    grid-template-areas: "header header header header" "banner banner banner banner" "carrusel carrusel carrusel carrusel" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-5 box-5" "box-6 box-6 box-6 box-6" "titulo-3 titulo-3 titulo-3 titulo-3" "box-7 box-7 box-7 box-7" "box-8 box-8 box-8 box-8"; }
   h1 {
     font-size: 1.5rem; } }
 
 /* RESPONSIVE PAGINA TIENDA*/
 @media (max-width: 896px) {
   .grid-tienda {
-    grid-template-areas: "header header header header"
- "banner banner banner banner"
-  "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-1 box-2 box-2"
- "box-3 box-3 box-4 box-4"
- "titulo-2 titulo-2 titulo-2 titulo-2"
- "box-5 box-5 box-6 box-6"
- "box-7 box-7 box-8 box-8"
- "titulo-3 titulo-3 titulo-3 titulo-3"
- "box-9 box-9 box-10 box-10"
- "box-11 box-11 box-12 box-12"
- "titulo-4 titulo-4 titulo-4 titulo-4"
- "box-13 box-13 box-14 box-14"
- "box-15 box-15 box-16 box-16"
- "titulo-5 titulo-5 titulo-5 titulo-5"
- "box-17 box-17 box-18 box-18"
- "box-19 box-19 box-20 box-20"
- "titulo-6 titulo-6 titulo-6 titulo-6"
- "box-21 box-21 box-22 box-22"
- "box-23 box-23 box-24 box-24"
- "carrusel carrusel carrusel carrusel"; } }
+    grid-template-areas: "header header header header" "banner banner banner banner"  "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-6 box-6" "box-7 box-7 box-8 box-8" "titulo-3 titulo-3 titulo-3 titulo-3" "box-9 box-9 box-10 box-10" "box-11 box-11 box-12 box-12" "titulo-4 titulo-4 titulo-4 titulo-4" "box-13 box-13 box-14 box-14" "box-15 box-15 box-16 box-16" "titulo-5 titulo-5 titulo-5 titulo-5" "box-17 box-17 box-18 box-18" "box-19 box-19 box-20 box-20" "titulo-6 titulo-6 titulo-6 titulo-6" "box-21 box-21 box-22 box-22" "box-23 box-23 box-24 box-24" "carrusel carrusel carrusel carrusel"; } }
 
 @media (max-width: 480px) {
   .grid-tienda {
-    grid-template-areas: "header header header header"
- "banner banner banner banner"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-1 box-1 box-1"
- "box-2 box-2 box-2 box-2"
- "box-3 box-3 box-3 box-3"
- "box-4 box-4 box-4 box-4"
- "titulo-2 titulo-2 titulo-2 titulo-2"
- "box-5 box-5 box-5 box-5"
- "box-6 box-6 box-6 box-6"
- "box-7 box-7 box-7 box-7"
- "box-8 box-8 box-8 box-8"
- "titulo-3 titulo-3 titulo-3 titulo-3"
- "box-9 box-9 box-9 box-9"
- "box-10 box-10 box-10 box-10"
- "box-11 box-11 box-11 box-11"
- "box-12 box-12 box-12 box-12"
- "titulo-4 titulo-4 titulo-4 titulo-4"
- "box-13 box-13 box-13 box-13"
- "box-14 box-14 box-14 box-14"
- "box-15 box-15 box-15 box-15"
- "box-16 box-16 box-16 box-16"
- "titulo-5 titulo-5 titulo-5 titulo-5"
- "box-17 box-17 box-17 box-17"
- "box-18 box-18 box-18 box-18"
- "box-19 box-19 box-19 box-19"
- "box-20 box-20 box-20 box-20"
- "titulo-6 titulo-6 titulo-6 titulo-6"
- "box-21 box-21 box-21 box-21"
- "box-22 box-22 box-22 box-22"
- "box-23 box-23 box-23 box-23"
- "box-24 box-24 box-24 box-24"
- "carrusel carrusel carrusel carrusel"; }
+    grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-5 box-5" "box-6 box-6 box-6 box-6" "box-7 box-7 box-7 box-7" "box-8 box-8 box-8 box-8" "titulo-3 titulo-3 titulo-3 titulo-3" "box-9 box-9 box-9 box-9" "box-10 box-10 box-10 box-10" "box-11 box-11 box-11 box-11" "box-12 box-12 box-12 box-12" "titulo-4 titulo-4 titulo-4 titulo-4" "box-13 box-13 box-13 box-13" "box-14 box-14 box-14 box-14" "box-15 box-15 box-15 box-15" "box-16 box-16 box-16 box-16" "titulo-5 titulo-5 titulo-5 titulo-5" "box-17 box-17 box-17 box-17" "box-18 box-18 box-18 box-18" "box-19 box-19 box-19 box-19" "box-20 box-20 box-20 box-20" "titulo-6 titulo-6 titulo-6 titulo-6" "box-21 box-21 box-21 box-21" "box-22 box-22 box-22 box-22" "box-23 box-23 box-23 box-23" "box-24 box-24 box-24 box-24" "carrusel carrusel carrusel carrusel"; }
   h1 {
     font-size: 1.5rem; } }
 
 /* RESPONSIVE PAGINA DESCARGAS*/
 @media (max-width: 480px) {
   .grid-descargas {
-    grid-template-areas: "header header header header"
- "banner banner banner banner"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-1 box-1 box-1"
- "box-2 box-2 box-2 box-2"
- "box-3 box-3 box-3 box-3"
- "box-4 box-4 box-4 box-4"
- "box-5 box-5 box-5 box-5"
- "box-6 box-6 box-6 box-6"
- "carrusel carrusel carrusel carrusel"; }
+    grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "box-5 box-5 box-5 box-5" "box-6 box-6 box-6 box-6" "carrusel carrusel carrusel carrusel"; }
   h1 {
     font-size: 1.5rem; } }
 
 /* RESPONSIVE PAGINA BLOG*/
 @media (max-width: 480px) {
   .grid-blog {
-    grid-template-areas: "header header header header"
- "banner banner banner banner"
- "titulo-1 titulo-1 titulo-1 titulo-1"
- "box-1 box-1 box-1 box-1"
- "box-2 box-2 box-2 box-2"
- "box-3 box-3 box-3 box-3"
- "box-4 box-4 box-4 box-4"
- "carrusel carrusel carrusel carrusel"; }
+    grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "carrusel carrusel carrusel carrusel"; }
   h1 {
     font-size: 1.5rem; } }

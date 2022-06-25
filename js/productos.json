@@ -4,28 +4,32 @@
         "id": 1,
         "nombre": "Washi Azul",
         "precio": 1000,
-        "descripcion": "Set de 10   washitape decorativas azules variadas",
+        "descripcion": "Set de 10   washitape decorativas azules variadas y lindas",
         "categoria": "washitapes",
         "stock": 5,
-        "img": "../imagenes/tienda/washitapes/washitape 1.jpg"
+        "img": "../imagenes/tienda/washitapes/washitape 1.jpg",
+        "destacado": 1
+        
     },
     {
         "id": 2,
         "nombre": "Washi Perritos",
         "precio": 2000,
-        "descripcion": "Set de 10 washitape decorativas perritos",
+        "descripcion": "Set de 10 washitape decorativas perritos variados y lindos",
         "categoria": "washitapes",
         "stock": 5,
-        "img": "../imagenes/tienda/washitapes/washitape 2.jpg" 
+        "img": "../imagenes/tienda/washitapes/washitape 2.jpg" ,
+        "destacado": 0
     },
     {
         "id": 3,
         "nombre": "Washi Abstracto",
         "precio": 3000,
-        "descripcion": "Set de 10 washitape decorativas Abstractas",
+        "descripcion": "Set de 10 washitape decorativas Abstractas y lindas",
         "categoria": "washitapes",
         "stock": 5,
-        "img": "../imagenes/tienda/washitapes/washitape 3.jpg"  
+        "img": "../imagenes/tienda/washitapes/washitape 3.jpg" ,
+        "destacado": 0 
     },
     {
         "id": 4,
@@ -34,7 +38,8 @@
         "descripcion": "Set de 3 washitape decorativas Van Gogh",
         "categoria": "washitapes",
         "stock": 5,
-        "img": "../imagenes/tienda/washitapes/washitape 4.jpg" 
+        "img": "../imagenes/tienda/washitapes/washitape 4.jpg" ,
+        "destacado": 0
     },
 
     {
@@ -44,7 +49,8 @@
         "descripcion": "Set numeros y letras coloridos. 48 patrones diferentes",
         "categoria": "sticker",
         "stock": 5,
-        "img": "../imagenes/tienda/sticker/sticker 1.jpg"
+        "img": "../imagenes/tienda/sticker/sticker 1.jpg",
+        "destacado": 1
     },
     {
         "id": 6,
@@ -53,7 +59,8 @@
         "descripcion": "Set de lindos sticker gatitos kawai. 45 patrones diferentes..",
         "categoria": "sticker",
         "stock": 5,
-        "img": "../imagenes/tienda/sticker/sticker 2.jpg" 
+        "img": "../imagenes/tienda/sticker/sticker 2.jpg" ,
+        "destacado": 0
     }, {
         "id": 7,
         "nombre": "Sticker POP",
@@ -61,7 +68,8 @@
         "descripcion": "Set sticker vintage Pop colorido. 46 patrones diferentes",
         "categoria": "sticker",
         "stock": 5,
-        "img": "../imagenes/tienda/sticker/sticker 3.jpg"
+        "img": "../imagenes/tienda/sticker/sticker 3.jpg",
+        "destacado": 0
     },
     {
         "id": 8,
@@ -70,7 +78,8 @@
         "descripcion": "Set decorativo pinturas Van Gogh. 100 patrones diferentes",
         "categoria": "sticker",
         "stock": 5,
-        "img": "../imagenes/tienda/sticker/sticker 4.jpg"
+        "img": "../imagenes/tienda/sticker/sticker 4.jpg",
+        "destacado": 0
     },
 
     {
@@ -80,7 +89,8 @@
         "descripcion": "Linda Agenda diseño gatitos. Estilo: Puntitos",
         "categoria": "agendas",
         "stock": 5,
-        "img": "../imagenes/tienda/agendas/agenda 1.jpg"
+        "img": "../imagenes/tienda/agendas/agenda 1.jpg",
+        "destacado": 0
     },
     {
         "id": 10,
@@ -89,7 +99,8 @@
         "descripcion": "Linda Agenda diseño letras. Estilo: Puntitos",
         "categoria": "agendas",
         "stock": 5,
-        "img": "../imagenes/tienda/agendas/agenda 2.jpg"
+        "img": "../imagenes/tienda/agendas/agenda 2.jpg",
+        "destacado": 0
     },
     {
         "id": 11,
@@ -98,7 +109,8 @@
         "descripcion": "Linda agenda diseño cactus. Estilo: Puntitos",
         "categoria": "agendas",
         "stock": 5,
-        "img": "../imagenes/tienda/agendas/agenda 3.jpg"
+        "img": "../imagenes/tienda/agendas/agenda 3.jpg",
+        "destacado": 0
     },
     {
         "id": 12,
@@ -107,7 +119,8 @@
         "descripcion": "Linda agenda diseño palta. Estilo: Puntitos",
         "categoria": "agendas",
         "stock": 5,
-        "img": "../imagenes/tienda/agendas/agenda 4.jpg"
+        "img": "../imagenes/tienda/agendas/agenda 4.jpg",
+        "destacado": 0
     },
 
     {
@@ -117,34 +130,38 @@
         "descripcion": "Lindos clips con estilo de cactus. 5 colores",
         "categoria": "accesorios",
         "stock": 5,
-        "img": "../imagenes/tienda/accesorios/accesorios 1.jpg"
+        "img": "../imagenes/tienda/accesorios/accesorios 1.jpg",
+        "destacado": 0
     },
     {
         "id": 14,
         "nombre": "Cutter",
         "precio": 3000,
-        "descripcion": "Lindos cutter para paginas. 1 diseño 3 colores",
+        "descripcion": "Lindos cutter para diferentes usos. 1 diseño 3 colores todos lindos",
         "categoria": "accesorios",
         "stock": 5,
-        "img": "../imagenes/tienda/accesorios/accesorios 2.jpg"
+        "img": "../imagenes/tienda/accesorios/accesorios 2.jpg",
+        "destacado": 1
     },
     {
         "id": 15,
         "nombre": "Cinta Decorativa",
         "precio": 3000,
-        "descripcion": "Linda cinta adhesiva kawai decorativa. 2 diseños",
+        "descripcion": "Linda cinta adhesiva kawai decorativa. 2 diseños diferentes",
         "categoria": "accesorios",
         "stock": 5,
-        "img": "../imagenes/tienda/accesorios/accesorios 3.jpg"
+        "img": "../imagenes/tienda/accesorios/accesorios 3.jpg",
+        "destacado": 0
     },
     {
         "id": 16,
         "nombre": "Sujeta Páginas",
         "precio": 3000,
-        "descripcion": "Lindos sujeta páginas medianos. 4 colores",
+        "descripcion": "Lindos sujeta páginas medianos. 4 colores todos lindos",
         "categoria": "accesorios",
         "stock": 5,
-        "img": "../imagenes/tienda/accesorios/accesorios 4.jpg"
+        "img": "../imagenes/tienda/accesorios/accesorios 4.jpg",
+        "destacado": 0
     },
 
     {
@@ -154,7 +171,8 @@
         "descripcion": "Lindos Marcadores de páginas. 5 diseños. 60 unidades",
         "categoria": "memopads",
         "stock": 5,
-        "img":"../imagenes/tienda/notas adhesivas/notas adhesivas 1.jpg" 
+        "img":"../imagenes/tienda/notas adhesivas/notas adhesivas 1.jpg" ,
+        "destacado": 1
     },
     {
         "id": 18,
@@ -163,7 +181,8 @@
         "descripcion": "Marca páginas indice. 2 diseños. 10 patrones. 15 unidades",
         "categoria": "memopads",
         "stock": 5,
-        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 2.jpg"
+        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 2.jpg",
+        "destacado": 0
     },
     {
         "id": 19,
@@ -172,7 +191,8 @@
         "descripcion": "Marca páginas indice. 2 diseños. 11 patrones. 15 unidades",
         "categoria": "memopads",
         "stock": 5,
-        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 3.jpg"
+        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 3.jpg",
+        "destacado": 0
     },
     {
         "id": 20,
@@ -181,7 +201,8 @@
         "descripcion": "Marca páginas Diseños. 2 diseños. 5 patrones. 20 unidades",
         "categoria": "memopads",
         "stock": 5,
-        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 4.jpg"
+        "img": "../imagenes/tienda/notas adhesivas/notas adhesivas 4.jpg",
+        "destacado": 0
     },
     {
         "id": 21,
@@ -190,7 +211,8 @@
         "descripcion": "Sencillo y fácil de usar. Estilo: Neon",
         "categoria": "planificadores",
         "stock": 5,
-        "img":"../imagenes/tienda/planificadores/planner 1.jpg"
+        "img":"../imagenes/tienda/planificadores/planner 1.jpg",
+        "destacado": 0
     },
     {
         "id": 22,
@@ -199,7 +221,8 @@
         "descripcion": "Sencillo y fácil de usar. Estilo: Donas",
         "categoria": "planificadores",
         "stock": 5,
-        "img": "../imagenes/tienda/planificadores/planner 2.jpg"
+        "img": "../imagenes/tienda/planificadores/planner 2.jpg",
+        "destacado": 0
     },
     {
         "id": 24,
@@ -208,7 +231,8 @@
         "descripcion": "Planifica tu mes y lleva el control de tus tareas",
         "categoria": "planificadores",
         "stock": 5,
-        "img":"../imagenes/tienda/planificadores/planner 3.jpg" 
+        "img":"../imagenes/tienda/planificadores/planner 3.jpg" ,
+        "destacado": 0
     },
     {
         "id": 23,
@@ -217,7 +241,8 @@
         "descripcion": "Planifica tu mes y lleva el control de tus tareas",
         "categoria": "planificadores",
         "stock": 5,
-        "img": "../imagenes/tienda/planificadores/planner 4.jpg"
+        "img": "../imagenes/tienda/planificadores/planner 4.jpg",
+        "destacado": 0
     }
  
 

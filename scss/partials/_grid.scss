@@ -16,7 +16,7 @@
     "banner banner banner banner"
     "carrusel carrusel carrusel carrusel"
     "titulo-1 titulo-1 titulo-1 titulo-1"
-    "box-1 box-2 box-3 box-4"
+    "divDestacados divDestacados divDestacados divDestacados"
     "titulo-2 titulo-2 titulo-2 titulo-2"
     "box-5 box-5 box-6 box-6"
     "titulo-3 titulo-3 titulo-3 titulo-3"
@@ -175,6 +175,9 @@
 .divProductos{
     grid-area: divProductos;
 }
+.divDestacados{
+    grid-area: divDestacados;
+}
 
 .grid-productos-1{
     grid-area: grid-productos-1;
@@ -323,4 +326,5 @@
     grid-area: box-24;
     @include secciones;
 }
+
 
