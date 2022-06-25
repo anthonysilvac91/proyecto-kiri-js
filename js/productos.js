@@ -11,19 +11,20 @@ const divProductos = document.getElementById("divProductos")
           //if(producto.categoria == "sticker" || producto.categoria == "accesorios"){ (Esto esta comentado para hacer pruebas, poder pintar segun categorias)
              
             divProductos.innerHTML += `
-            <section class=" col-3 box-${producto.id} producto" >
+            <section class=" col-3 box-${producto.id} producto" id="item" >
                 <div class="item "  id="producto${producto.id}">
                     <div class="contenedor-img">
                         <a href="#">
                             <img src="${producto.img}" alt="${producto.categoria}">
                         </a>
                     </div>
-                    <strong>$${producto.precio}</strong>
-                    <h2>${producto.nombre}</h2>
+                    <strong class="product-price">$${producto.precio}</strong>
+                    <h2 class="product-name">${producto.nombre}</h2>
                     <p> ${producto.descripcion} </p>
                     
-                    <button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button>
-                        
+                    
+                    <button id="boton${producto.id}" class="boton carrito add-to-cart-btn">Añadir al carrito</button>
+                       
                 </div>
             </section>`
           //}
@@ -31,3 +32,5 @@ const divProductos = document.getElementById("divProductos")
 
         })
  })
+
+ //<button onclick="agregar(${producto.id})" id="boton${producto.id}" class="boton carrito">Añadir al carrito</button> //
