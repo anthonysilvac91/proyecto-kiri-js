@@ -106,33 +106,3 @@ function loadCart(){
 }
 
 //CALCULAR TOTAL DEL CARRITO
-function findCartInfo(){
-    let products = getProductFromStorage();
-    let total = products.reduce((acc, product) => {
-        let price = parseFloat(product.price.substr(1));
-        return acc += price;
-    }, 0);
-
-    return{
-        total: total.toFixed(2),
-        productCount: products.length
-    }
-}
-
-function deleteProduct(e){
-    let cartItem;
-    if(e.target.tagName === "BUTTON"){
-        cartItem = e.target.parentElement;
-        cartItem.remove(); 
-    } else if(e.target.tagName === "I"){
-        cartItem = e.target.parentElement.parentElement;
-        cartItem.remove(); 
-    }
-
-    let products = getProductFromStorage();
-    let updatedProducts = products.filter(product => {
-        return product.id !== parseInt(cartItem.dataset.id);
-    });
-    localStorage.setItem('products', JSON.stringify(updatedProducts)); 
-    updateCartInfo();
-}
