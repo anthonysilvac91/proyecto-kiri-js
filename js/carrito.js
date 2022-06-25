@@ -1,5 +1,5 @@
 //DECLARACION DE VARIABLES
-const productList = document.querySelector('.divProductos')
+const lIST = document.querySelector('.divProductos')
 const cartList = document.querySelector('.cart-list')
 const cartCountInfo = document.getElementById('cart-count-info')
 const cartTotalValue = document.getElementById('cart-total-value')
