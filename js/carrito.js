@@ -1,108 +1,131 @@
-//DECLARACION DE VARIABLES
-const productList = document.querySelector('.divProductos')
-const cartList = document.querySelector('.cart-list')
-const cartCountInfo = document.getElementById('.cart-count-info')
-const cartTotalValue = document.getElementById('.cart-total-value')
+//Declaracion de variables
+const listaProductos = document.querySelector('.divProductos') //productList 
+const listaCarrito = document.querySelector('.listaCarrito') //cartList - cart-list
+const valorConteoCarrito = document.getElementById('valorConteoCarrito') //cartCountInfo - cart-count-info
+const valorTotalCarrito = document.getElementById('valorTotalCarrito') //cartTotalValue - cart-total-value
 let cartItemID = 1
 
-//EVENTOS
-    function eventListeners(){
-        window.addEventListener('DOMContentLoaded', () => {
-            loadCart()
-        })
-    }
- 
+eventListeners()
 
-    // AGREGAR AL CARRITO
-    productList.addEventListener('click', purchaseProduct);
+//Eventos
+function eventListeners(){
+    window.addEventListener('DOMContentLoaded', () => {
+        cargarCarrito()
+    })
+    listaProductos.addEventListener('click', comprarProducto)
+    listaCarrito.addEventListener('click', eliminarProducto);
+}
 
-    // VACIAR CARRITO
-    cartList.addEventListener('click', deleteProduct);
+function actualizarCarrito(){
+    let cartInfo = findCartInfo()
+    valorConteoCarrito.textContent = cartInfo.productCount;
+    valorTotalCarrito.textContent = cartInfo.total;
+}
 
-
-    function updateCartInfo(){
-        let cartInfo = findCartInfo();
-        cartCountInfo.textContent = cartInfo.productCount;
-        cartTotalValue.textContent = cartInfo.total;
-    }
+actualizarCarrito()
 
 
-    // AGREGAR PRODUCTOS
 
-function purchaseProduct(e){
-
-   
-    if(e.target.classList.contains('add-to-cart-btn')){
-        
-        let product = e.target.parentElement.parentElement
-        
-        getProductInfo(product)
+//Obtener producto al clickear
+function comprarProducto(e){
+    if(e.target.classList.contains('addCarrito')){
+        let producto = e.target.parentElement.parentElement
+        productoInfo(producto)
      }
 }
 
-//OBTENER INFORMACION DE PRODUCTOS AL AGREGAR AL CARRITO
-function getProductInfo(product){
-    let productInfo = {
-        id: cartItemID,
-        imgSrc: product.querySelector('.contenedor-img img').src,
-        nombre: product.querySelector('.product-name').textContent,
-        precio: product.querySelector('.product-price').textContent
-    }
-
-    cartItemID++
-    console.log(productInfo)
-    addToCartList(productInfo);
-    saveProductInStorage(productInfo);
+//Obtener info de producto clickeado
+function productoInfo(producto){
+     let productoInfo = {
+         id: cartItemID,
+         imgSrc: producto.querySelector('.contenedor-img img').src,
+         nombre: producto.querySelector('.nombreProducto').textContent,
+         precio: producto.querySelector('.precioProducto').textContent
+     }
+     cartItemID++
+     agregarListaCarrito(productoInfo)
+     guardarProductoStorage(productoInfo) 
 }
 
-//PINTAR PRODUCTOS EN EL CARRITO
-
-function addToCartList(product){
-    const cartItem = document.createElement('div')
-    cartItem.classList.add('item-carrito')
-    cartItem.setAttribute('data-id', `${product.id}`)
-    cartItem.innerHTML = `
-        <img src = "${product.imgSrc}" alt = "product image">
-        <div class = "cart-item-info">
-            <h3 class = "cart-item-name">${product.nombre}</h3>
-            <span class = "cart-item-price">${product.precio}</span>
+//Pintar productos clickeados en carrito
+function agregarListaCarrito(producto){
+     const cartItem = document.createElement('div')
+     cartItem.classList.add('item-carrito')
+     cartItem.setAttribute('data-id', `${producto.id}`)
+     cartItem.innerHTML = `
+        <img src = "${producto.imgSrc}" alt = "imagen ${producto.categoria} ">
+        <div class = "InfoProductoCarrito">
+            <h3 class = "nombreProductoCarrito">${producto.nombre}</h3>
+            <span class = "precioProductoCarrito">${producto.precio}</span>
+            
         </div>
         <button type = "button" class = "eliminar">
             <i class = "fas fa-times"></i>
         </button>
     `
-    cartList.appendChild(cartItem)
+    listaCarrito.appendChild(cartItem)
 }
 
-//GUARDAR PRODUCTO EN LOCALSTORAGE
-function saveProductInStorage(item){
-    let products = getProductFromStorage();
-    products.push(item);
-    localStorage.setItem('products', JSON.stringify(products));
-    updateCartInfo();
+//Guardar producto en storage
+
+function guardarProductoStorage(item){
+    let productos = obtenerProductoStorage()
+    productos.push(item)
+    localStorage.setItem('productos', JSON.stringify(productos))
+    actualizarCarrito()
 }
 
-// OBTENER PRODUCTO DE LOCALSTORAGE
-function getProductFromStorage(){
-    return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
-    
+//Obtener productos del storage
+function obtenerProductoStorage(){
+    return localStorage.getItem('productos') ? JSON.parse(localStorage.getItem('productos')) : []     
 }
 
-//CARGAR PRODUCTOS Y AUMENTAR CANTIDAD
-
-function loadCart(){
-    let products = getProductFromStorage();
-    if(products.length < 1){
-        cartItemID = 1; 
-    } else {
-        cartItemID = products[products.length - 1].id;
-        cartItemID++;
-        
+//Cargar productos del carrito
+function cargarCarrito(){
+    let productos = obtenerProductoStorage()
+    if(productos.length < 1){
+        cartItemID = 1           
+    }else {
+        cartItemID = productos[productos.length - 1].id
+        cartItemID++
     }
-    products.forEach(product => addToCartList(product));
-
-   
-    updateCartInfo();
+    productos.forEach(producto => agregarListaCarrito(producto))
 }
 
-//CALCULAR TOTAL DEL CARRITO
+//Calcular precio final
+function findCartInfo(){
+    let productos = obtenerProductoStorage()
+    let total = productos.reduce((acc, producto) =>{
+        let precio = parseFloat(producto.precio.substr(1))
+        return acc += precio
+    }, 0)
+    return{
+        total: total.toFixed(2),
+        productCount: productos.length
+    }
+}
+
+findCartInfo()
+
+//Eliinar producto del carrito
+function eliminarProducto(e){
+    let cartItem
+    if(e.target.tagName === "BUTTON"){
+        cartItem = e.target.parentElement
+        cartItem.remove()
+
+    }else if(e.target.tagName === "I"){
+        cartItem = e.target.parentElement.parentElement
+        cartItem.remove()
+    }
+    let productos = obtenerProductoStorage()
+    let actualizarProductos = productos.filter(producto => {
+        return producto.id !== parseInt(cartItem.dataset.id);
+    });
+    localStorage.setItem('productos', JSON.stringify(actualizarProductos))
+    actualizarCarrito()  
+}
+
+
+    
+

@@ -54,7 +54,7 @@ i {
   background-color: #f8f9fa;
   border: 0ch; }
 
-#cart-count-info {
+#valorConteoCarrito {
   position: absolute;
   top: 30px;
   right: 15px;
@@ -94,7 +94,7 @@ i {
   border-radius: 5px;
   color: #f8f9fa; }
 
-.cart-item-info {
+.InfoProductoCarrito {
   text-align: left; }
 
 /* GRID DE PAGINAS */
