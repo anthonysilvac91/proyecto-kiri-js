@@ -30,10 +30,17 @@
   
 }
 
-    .producto{
-        @include escala;
-        @include boton;
+.producto{
+    @include escala;
+    @include boton;
+    p{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
+   
+    
+}
 
 
 .blog{

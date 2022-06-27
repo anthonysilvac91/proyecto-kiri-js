@@ -12,19 +12,17 @@ function eventListeners(){
     window.addEventListener('DOMContentLoaded', () => {
         cargarCarrito()
     })
+    //Agregar al carrito
     listaProductos.addEventListener('click', comprarProducto)
-    listaCarrito.addEventListener('click', eliminarProducto);
+    //Eliminar del carrito
+    listaCarrito.addEventListener('click', eliminarProducto)
 }
 
 function actualizarCarrito(){
     let cartInfo = findCartInfo()
-    valorConteoCarrito.textContent = cartInfo.productCount;
-    valorTotalCarrito.textContent = cartInfo.total;
+    valorConteoCarrito.textContent = cartInfo.productCount
+    valorTotalCarrito.textContent = cartInfo.total
 }
-
-actualizarCarrito()
-
-
 
 //Obtener producto al clickear
 function comprarProducto(e){
@@ -90,6 +88,8 @@ function cargarCarrito(){
         cartItemID++
     }
     productos.forEach(producto => agregarListaCarrito(producto))
+
+    actualizarCarrito()
 }
 
 //Calcular precio final

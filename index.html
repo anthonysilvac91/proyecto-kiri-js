@@ -33,6 +33,9 @@
 
                         <img src="./imagenes/marca/logo-kiripaper.png" alt="logo">
                     </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav me-auto">
                     <li class="nav-item">
@@ -54,13 +57,20 @@
                     </li>
                     
                     </ul>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <button data-bs-toggle="modal" data-bs-target="#miModal" type = "button" id = "cart-btn" class="navBtnCarrito">
-                        <i class = "fas fa-shopping-cart"></i>
-                        <span id = "cart-count-info"></span>
-                      </button>
+                    
                 </div>
+
                 </div>
+                <div class="btnCarrito-buscar">
+                    <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div><button data-bs-toggle="modal" data-bs-target="#miModal" type = "button" id = "cart-btn" class="navBtnCarrito">
+                      <i class = "fas fa-shopping-cart"></i>
+                      <span id = "cart-count-info"></span>
+                  </button></div>
+                  </div>
+                
+                </div>
+                
             </nav> 
             <!-- MODAL CARRITO -->
             <div class="modal" id="miModal" tabindex="-1">
@@ -89,42 +99,6 @@
                     </div>
                   </div>
                 </div>
-              
-
-            <!-- MENU PENDIENTE ARREGLAR BOOSTRAP 5.2 (REVISAR CSS) -->
-            <!-- <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a href="./index.html">
-
-                        <img src="./imagenes/marca/logo-kiripaper.png" alt="logo">
-                    </a>                
-                  
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="./pages/tienda.html">Tienda</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="./pages/blog.html">Blog</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="./pages/descargas.html">Descargas</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="./pages/descargas.html">Contacto</a>
-                      </li>
-                      
-                    </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                  </div>
-                </div>
-              </nav> -->
         </header>
         <!-- BANNER PROMOCIONAL -->
         <section class="banner">
@@ -163,7 +137,7 @@
                 <a href="./pages/tienda2.html">PRODUCTOS DESTACADOS</a>
             </h1>
         </section>
-        <section class="divDestacados container" >
+        <section class="divDestacados container-fluid" >
             <div class="row" id="divDestacados">
                 <!-- PRODUCTOS DESTACADOS AGREGADOS CON PRODUCTOS.JS -->
             </div>

@@ -138,16 +138,6 @@ i {
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
   grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "formulario formulario formulario formulario" "box-1 box-1 box-1 box-1"; }
 
-.grid-tienda {
-  width: 90%;
-  max-width: 1000px;
-  margin: 10px auto;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "header header header header" "banner banner banner banner" "titulo-0 titulo-0 titulo-0 titulo-0" "nav-carrito nav-carrito nav-carrito nav-carrito" "titulo-1 titulo-1 titulo-1 titulo-1" "grid-productos-1 grid-productos-1 grid-productos-1 grid-productos-1" "titulo-2 titulo-2 titulo-2 titulo-2" "grid-productos-2 grid-productos-2 grid-productos-2 grid-productos-2" "titulo-3 titulo-3 titulo-3 titulo-3" "grid-productos-3 grid-productos-3 grid-productos-3 grid-productos-3" "titulo-4 titulo-4 titulo-4 titulo-4" "grid-productos-4 grid-productos-4 grid-productos-4 grid-productos-4" "titulo-5 titulo-5 titulo-5 titulo-5" "grid-productos-5 grid-productos-5 grid-productos-5 grid-productos-5" "titulo-6 titulo-6 titulo-6 titulo-6" "grid-productos-6 grid-productos-6 grid-productos-6 grid-productos-6" "carrusel carrusel carrusel carrusel"; }
-
 .grid-tienda2 {
   width: 90%;
   max-width: 1000px;
@@ -157,49 +147,6 @@ i {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(auto, 1fr, minmax(min-content));
   grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "divProductos divProductos divProductos divProductos" "divProductos divProductos divProductos divProductos" "carrusel carrusel carrusel carrusel"; }
-
-/* GRID SECCION PRODUCTOS */
-.grid-productos-1 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "box-1 box-2 box-3 box-4"; }
-
-.grid-productos-2 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "box-5 box-6 box-7 box-8"; }
-
-.grid-productos-3 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "box-9 box-10 box-11 box-12"; }
-
-.grid-productos-4 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "box-13 box-14 box-15 box-16"; }
-
-.grid-productos-5 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "box-17 box-18 box-19 box-20"; }
-
-.grid-productos-6 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto, 1fr, minmax(min-content));
-  grid-template-areas: "box-21 box-22 box-23 box-24"; }
 
 .header {
   grid-area: header; }
@@ -224,23 +171,8 @@ i {
 .divDestacados {
   grid-area: divDestacados; }
 
-.grid-productos-1 {
-  grid-area: grid-productos-1; }
-
-.grid-productos-2 {
-  grid-area: grid-productos-2; }
-
-.grid-productos-3 {
-  grid-area: grid-productos-3; }
-
-.grid-productos-4 {
-  grid-area: grid-productos-4; }
-
-.grid-productos-5 {
-  grid-area: grid-productos-5; }
-
-.grid-productos-6 {
-  grid-area: grid-productos-6; }
+.grid-destacados {
+  grid-area: grid-destacados; }
 
 .nav-carrito {
   background: #f8f9fa;
@@ -514,6 +446,11 @@ i {
   .producto .boton:hover {
     background-color: pink; }
 
+.producto p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
 .blog p {
   text-align: justify; }
 
@@ -576,24 +513,29 @@ i {
 /* RESPONSIVE INDEX*/
 @media (max-width: 896px) {
   .grid-index {
-    grid-template-areas: "header header header header" "banner banner banner banner" "carrusel carrusel carrusel carrusel" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-6 box-6" "titulo-3 titulo-3 titulo-3 titulo-3" "box-7 box-7 box-8 box-8"; } }
+    grid-template-areas: "header header header header" "banner banner banner banner" "carrusel carrusel carrusel carrusel" "titulo-1 titulo-1 titulo-1 titulo-1" "divDestacados divDestacados divDestacados divDestacados" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-6 box-6" "titulo-3 titulo-3 titulo-3 titulo-3" "box-7 box-7 box-8 box-8"; }
+  h1 {
+    font-size: 1.5rem; }
+  .producto h2 {
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .addCarrito {
+    font-size: .8rem; } }
 
 @media (max-width: 480px) {
   .grid-index {
-    grid-template-areas: "header header header header" "banner banner banner banner" "carrusel carrusel carrusel carrusel" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-5 box-5" "box-6 box-6 box-6 box-6" "titulo-3 titulo-3 titulo-3 titulo-3" "box-7 box-7 box-7 box-7" "box-8 box-8 box-8 box-8"; }
+    grid-template-areas: "header header header header" "banner banner banner banner" "carrusel carrusel carrusel carrusel" "titulo-1 titulo-1 titulo-1 titulo-1" "divDestacados divDestacados divDestacados divDestacados" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-5 box-5" "box-6 box-6 box-6 box-6" "titulo-3 titulo-3 titulo-3 titulo-3" "box-7 box-7 box-7 box-7" "box-8 box-8 box-8 box-8"; }
   h1 {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .btnCarrito-buscar {
+    display: flex; } }
 
 /* RESPONSIVE PAGINA TIENDA*/
-@media (max-width: 896px) {
-  .grid-tienda {
-    grid-template-areas: "header header header header" "banner banner banner banner"  "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-6 box-6" "box-7 box-7 box-8 box-8" "titulo-3 titulo-3 titulo-3 titulo-3" "box-9 box-9 box-10 box-10" "box-11 box-11 box-12 box-12" "titulo-4 titulo-4 titulo-4 titulo-4" "box-13 box-13 box-14 box-14" "box-15 box-15 box-16 box-16" "titulo-5 titulo-5 titulo-5 titulo-5" "box-17 box-17 box-18 box-18" "box-19 box-19 box-20 box-20" "titulo-6 titulo-6 titulo-6 titulo-6" "box-21 box-21 box-22 box-22" "box-23 box-23 box-24 box-24" "carrusel carrusel carrusel carrusel"; } }
-
 @media (max-width: 480px) {
-  .grid-tienda {
-    grid-template-areas: "header header header header" "banner banner banner banner" "titulo-1 titulo-1 titulo-1 titulo-1" "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2" "box-3 box-3 box-3 box-3" "box-4 box-4 box-4 box-4" "titulo-2 titulo-2 titulo-2 titulo-2" "box-5 box-5 box-5 box-5" "box-6 box-6 box-6 box-6" "box-7 box-7 box-7 box-7" "box-8 box-8 box-8 box-8" "titulo-3 titulo-3 titulo-3 titulo-3" "box-9 box-9 box-9 box-9" "box-10 box-10 box-10 box-10" "box-11 box-11 box-11 box-11" "box-12 box-12 box-12 box-12" "titulo-4 titulo-4 titulo-4 titulo-4" "box-13 box-13 box-13 box-13" "box-14 box-14 box-14 box-14" "box-15 box-15 box-15 box-15" "box-16 box-16 box-16 box-16" "titulo-5 titulo-5 titulo-5 titulo-5" "box-17 box-17 box-17 box-17" "box-18 box-18 box-18 box-18" "box-19 box-19 box-19 box-19" "box-20 box-20 box-20 box-20" "titulo-6 titulo-6 titulo-6 titulo-6" "box-21 box-21 box-21 box-21" "box-22 box-22 box-22 box-22" "box-23 box-23 box-23 box-23" "box-24 box-24 box-24 box-24" "carrusel carrusel carrusel carrusel"; }
-  h1 {
-    font-size: 1.5rem; } }
+  .grid-tienda2 h1 {
+    font-size: 1.3rem; } }
 
 /* RESPONSIVE PAGINA DESCARGAS*/
 @media (max-width: 480px) {

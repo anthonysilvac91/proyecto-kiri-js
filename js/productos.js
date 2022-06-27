@@ -6,34 +6,34 @@ const divDestacados = document.getElementById("divDestacados")
 
 // SE PINTAN LOS PRODUCTOS DESTACADOS EN INDEX
 
-    // fetch('../js/productos.json')
-    // .then(response => response.json())
-    // .then(producto => {  
-    //   producto.forEach((producto) =>{ 
+    fetch('../js/productos.json')
+    .then(response => response.json())
+    .then(producto => {  
+      producto.forEach((producto) =>{ 
          
-    //     if(producto.destacado == "1"){
-    //         divDestacados.innerHTML += `
-    //         <section class=" col-3 box-${producto.id} producto" id="item" >
-    //             <div class="item "  id="producto${producto.id}">
-    //                 <div class="contenedor-img">
-    //                     <a href="#">
-    //                         <img src="${producto.img}" alt="${producto.categoria}">
-    //                     </a>
-    //                 </div>
-    //                 <strong class="product-price">$${producto.precio}</strong>
-    //                 <h2 class="product-name">${producto.nombre}</h2>
-    //                 <p> ${producto.descripcion} </p>
+        if(producto.destacado == "1"){
+            divDestacados.innerHTML += `
+            <section class="col-lg-3 col-md-6 col-6 box-${producto.id} producto" id="item" >
+                <div class="item "  id="producto${producto.id}">
+                    <div class="contenedor-img">
+                        <a href="#">
+                            <img src="${producto.img}" alt="${producto.categoria}">
+                        </a>
+                    </div>
+                    <strong class="product-price">$${producto.precio}</strong>
+                    <h2 class="product-name">${producto.nombre}</h2>
+                    <p> ${producto.descripcion} </p>
                     
                     
-    //                 <button id="boton${producto.id}" class="boton carrito addCarrito">Añadir al carrito</button>
+                    <button id="boton${producto.id}" class="boton carrito addCarrito">Añadir al carrito</button>
                        
-    //             </div>
-    //         </section>`
+                </div>
+            </section>`
 
-    //       }
+          }
         
-    //       })
-    //     })
+          })
+        })
 
  // SE PINTAN LOS PRODUCTOS DESTACADOS EN TIENDA
 
@@ -42,8 +42,8 @@ const divDestacados = document.getElementById("divDestacados")
         .then(producto => {  
           producto.forEach((producto) =>{
                 divProductos.innerHTML += `
-                <section class=" col-3 box-${producto.id} producto" id="item" >
-                    <div class="item "  id="producto${producto.id}">
+                <section class="col-lg-3 col-md-4 col-6 box-${producto.id} producto" id="item" >
+                    <div class="item"  id="producto${producto.id}">
                         <div class="contenedor-img">
                             <a href="#">
                                 <img src="${producto.img}" alt="${producto.categoria}">
